@@ -1,0 +1,66 @@
+
+<div id="content" >
+    <!--Левая колонка-->
+    <div id="leftcol" *ngIf="state">
+        <div class="block">
+            <div class="archetype" *ngFor="let archetype of archetypes" (click)="archetypeClick(archetype)">
+                <img src={{archetype.imageURL}} [ngClass]="{selected: archetype.selected}" alt={{archetype.name}}>
+                <span >{{archetype.name}}</span>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="celebration">
+                <p>Праздник</p>
+                <select [(ngModel)]="tags.celebration" (change)="submit(tags)">
+                    <option *ngFor="let option of options" [value]="option">{{option}}</option>
+                </select>
+            </div>
+            <div class="gender">
+                <p>Пол</p>
+                <select [(ngModel)]="tags.gender" (change)="submit(tags)">
+                        <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+                </select>
+            </div>
+            <div class="age">
+                <p>Возраст</p>
+                <div class="age1">
+                    <span>от:</span>
+                    <input class="number" type="number" pattern="[0-9]{,3}" min="5" max="100" [(ngModel)]="tags.ageFirst" step="1" (change)="submit(tags)">
+                    <span>лет</span>
+                    <input class="range" type="range" min="5" max="100" step="1"[(ngModel)]="tags.ageFirst" (change)="submit(tags)">
+                </div>
+                <div class="age2">
+                    <span>до:</span>
+                    <input class="number" type="number" pattern="[0-9]{,3}" min="5" max="100" [(ngModel)]="tags.ageSecond" step="1" (change)="submit(tags)">
+                    <span>лет</span>
+                    <input class="range" type="range" min="5" max="100" step="1"[(ngModel)]="tags.ageSecond" (change)="submit(tags)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Контент-->
+    <div id="main">
+            <div class="panel">
+                    <div class="flex-offer-container" *ngIf="state">
+                        <div class="flex-item flex-offer" *ngFor="let item of receivedOffer">
+                                <img src={{item.image_url}} alt="">
+                                <h3><a [routerLink]="['/offers', item.offer_id]">{{item.name}}</a></h3>
+                                <p>{{item.review}}</p>
+                        </div>
+                    </div>
+                    <div *ngIf="!state">
+                            <div class="offer_image">
+                                    <img src="{{receivedOffer[0].image_url}}" alt="">
+                                </div>
+                                <div class="single_offer_content">
+                                    <h3 class="offer_name">{{receivedOffer[0].name}}</h3>
+                                    <div class="description">
+                                        {{receivedOffer[0].description}}
+                                    </div>
+                                </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+

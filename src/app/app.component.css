@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Wonderland;
+    src: url(../app/font/8752.ttf);
+}
+
+.body {
+    font-family: Arial, sans-serif;
+	color: #222222;
+
+}
+
+header {
+	background: #F2BF45 ;
+    background: url(../assets/images/presents-1913987_1280.jpg) no-repeat center top / cover ;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+    border-radius: 0 0 80px 80px;
+    padding: 50px 10% 20px 10%;
+    
+    
+}
+
+.titles a{
+    font-size: 45px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.titles a:hover{
+    color: rgba(247, 206, 255, 0.8);
+    text-shadow: -1px 0px 1px black;
+    transition: 0.5s all;
+}
+
+.titles{
+    background-color: rgba(252, 209, 12, 0.9);;
+    font-family: Wonderland;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-shadow: -2px 0px 1px black;
+    border-radius: 70px;
+    border: 1px solid black;
+}
+
+@media (max-width: 630px){
+    .titles a{
+        font-size: 35px;
+        color: #FFF;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+
+    
+    

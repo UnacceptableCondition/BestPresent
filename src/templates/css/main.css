@@ -1,0 +1,246 @@
+
+@font-face {
+    font-family: Wonderland;
+    src: url(../font/8752.ttf);
+}
+
+
+:host{
+	padding: 0;
+	margin: 0;
+}
+
+.body {
+	font-family: Arial, sans-serif;
+	color: #222222;
+	min-width: 1000px;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+header {
+	background: #F2BF45 ;
+	background: url(../img/presents-1913987_1280.jpg);
+	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
+	background: -webkit-gradient(linear, left top, left bottom, from(#0080FF), to(#FFFFFF));
+	background: -moz-linear-gradient(top,  #FA4C56,  #FFFFFF  );
+	/*background: url(../img/christmas-1900489_1920.jpg) no-repeat center top / cover;*/
+	padding-bottom: 50px;
+	/*background-color: #0080FF;*/
+	min-height: 300px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	border-radius: 0px 0px 100px 100px;
+}
+
+.heading{
+background: #FCFAC5;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
+background: -webkit-gradient(linear, left top, left bottom, from(#FCFAC5), to(#B78B01));
+background: -moz-linear-gradient(top,  #FCFAC5,  #B78B01);
+border-bottom: 1px solid black;
+/*border-radius: 50px 50px 50px 50px;*/
+}
+
+.logo {
+	margin: 5px 0px 0px 10px;
+	float: left;
+}
+
+.container{
+	width: 930px;
+	margin: 0 auto;
+}
+
+nav {
+	float: right;
+	margin-top: 0px;
+}
+
+.menu {
+	 list-style: none; /* Отключение отображения маркеров. */
+}
+
+.menu li {
+   float: left; /* Выстраивание элементов списка в один ряд. */
+   margin-right: 1px; /* создание отступов для того, чтобы не сливались пункты меню. */
+   font-family: Verdana, Arial, Helvetica, sans-serif; /* Указание типа шрифта. */
+   font-size: 14px; /* Размер текста в ссылках. */
+   /*border-left: 1px solid black;*/
+}
+
+.menu a{
+   display: block; /* Изменение отображения на блочное для того чтобы иметь возможность задать внутренние отступы. */
+   padding: 15px 20px;  /* Внутри блочные отступы. */
+	/*background: #0db5b5; /* Цвет блоков меню. */
+   color: #FFF; /* Цвет текста в блоках меню. */
+   text-decoration: none; /* Устранение подчёркивания ссылок. */
+   position: relative; /* Это необходимо при использовании Internet Explorer 6 для того, чтобы ссылка по всей своей площади была «кликабельной». */
+}
+
+.menu a:hover{
+	background-color: #3C6D4E;
+	}
+
+.titles__first {
+	font-size: 40px;
+	color: #FDEC72;
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: -2px 0px 2px black;
+}
+
+h1 {
+
+	/*background-color: #F2CA45;*/
+	background-color: rgba(242, 219, 69, 0.8);
+	font-size: 50px;
+	font-family: Wonderland;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 15px;
+	padding: 50px 0px;
+	text-shadow: -2px 0px 1px black;
+	border-radius: 150px 150px 150px 150px;
+	border: 1px solid black;
+	/*-webkit-text-stroke: 1px black;*/
+
+}
+
+
+.clearfix:after {
+	content:'';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+
+.titles{
+	padding-top: 60px;
+}
+
+.button{
+	background: #FF0040;
+	border: 2px solid black;
+	text-decoration: none;
+	color: #FFF;
+	border-radius: 50px 50px 50px 50px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 25px;
+}
+
+.button:hover{
+	background: #DF013A;
+}	
+
+.title {
+	padding-top: 30px;
+}
+
+.title h2 {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.title p {
+	color: #777777;
+	text-align: center;
+	font-size: 16px;
+
+}
+
+.services {
+	margin-top: 50px;
+}
+
+.services__item{
+	text-align: center;
+	float: left;
+	width: 350px;
+	line-height: 1.55em;
+}
+
+.services__item h3{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.services__item p{
+	font-size: 14px;
+	color: #777777;
+}
+
+.services__item:last-child{
+	float: right;
+}
+
+.services__item:nth-child(2){
+	margin-left: 62px;
+}
+
+#portfolio {
+	background: #f7f7f7;
+	padding-bottom: 120px;
+}
+
+#services{
+	padding-bottom: 120px;
+	/*background-color: 	#C5F2D5;*/
+	
+}
+
+.work img{
+	float:left;
+}
+
+.work img:last-child{
+	float:right;
+}
+
+.work img:nth-child(2){
+	margin-left: 29px;
+}
+
+.work {
+	margin-top: 70px;
+}
+
+
+
+/*GENDER  STYLE*/
+
+.man{
+	float: left;
+	margin-left: 9%;
+	border: 1px solid black;	
+}
+
+.girl{
+	float: right;
+	margin-right: 9%;
+	border: 1px solid black;	
+}
+
+.r_input{
+	display: block;
+}
+
+
+
+
+
+/*GENDER  STYLE*/
+
+

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="flex-container">   
+        <div class="flex-item">
+        <!--<img [src]="imageGendersSrc" alt="Услуга">-->
+            <h3>Выберите Пол</h3>
+            <div class="flex-gender">
+                <div class="flex-man">
+                    <img [src]="imageManSrc" [ngClass]="{selected: gender}" (click)="changed()"  alt="Man" class="pointer">
+                </div>
+                <div class="flex-girl">
+                    <img [src]="imageGirlSrc" [ngClass]="{selected: !gender}" (click)="changed()"  alt="Girl" class="pointer">
+                </div>
+            </div>
+        </div>
+        <div class="flex-item">
+            <div class="age">
+                <!--<img src="/assets/images/age.png" alt="Услуга">-->
+                <h3>Выберите возраст</h3>
+                <div class="age_first">
+                    <span>от:</span>
+                    <input class="number" type="number" pattern="[0-9]{,3}" min="5" max="100" [(ngModel)]="tags.ageFirst" step="1">
+                    <span>лет</span>
+                    <input class="range" type="range" min="5" max="100" step="1"[(ngModel)]="tags.ageFirst">
+                </div>
+                <div class="age_second">
+                    <span>до:</span>
+                    <input class="number" type="number" pattern="[0-9]{,3}" min="5" max="100" [(ngModel)]="tags.ageSecond" step="1">
+                    <span>лет</span>
+                    <input class="range" type="range" min="5" max="100" step="1"[(ngModel)]="tags.ageSecond">
+                </div>
+            </div>
+        </div>
+        <div class="flex-item">
+            <div class="celebration">
+                <!--<img src="/assets/images/calendar.png" alt="Услуга">-->
+                <h3>Выберите праздник</h3>
+                <select [(ngModel)]="tags.celebration">
+                    <option *ngFor="let option of options" [value]="option">{{option}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="button-container">
+    <div class="flex-button-container">
+        <div class="arrow-left">
+                <img src="assets/images/arrow_left.png" alt="">
+        </div>
+        <div class="button" (click)="to_offers(tags)" >Выбрать!</div>
+        <div class="arrow-right">
+                <img src="assets/images/arrow_right.png" alt="">
+        </div>
+    </div>
+</div>
